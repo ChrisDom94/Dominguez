@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Status</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+    </style>
+    <style>
+      ul {
+        text-align: left;
+      }
+    </style>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+    <style>
+      body {
+        background-color: #19f9fc;
+      }
+    </style>
+    <style>
+      body {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Order Status</h2>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="index.html" class="navbar__links">
+          Home >>
+          <a href="order_status.html" class="navbar__links">
+            Order Status
+          </a></a
+        >
+      </li>
+    </ul>
+
+    <form order_status>
+      <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        <label for="Name" class="fcf-label">Your name</label>
+        <div class="fcf-input-group">
+            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+        </div>
+    <div class="fcf-form-group">
+        <label for="Email" class="fcf-label">Email</label>
+        <div class="fcf-input-group">
+            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+        </div>
+    <div class="fcf-form-group">
+        <label for="Phone" class="fcf-label">Phone Number</label>
+        <div class="fcf-input-group">
+            <input type="phone" id="Phone" name="Phone" class="fcf-form-control" required>
+      </div>
+       <br>
+      <div class="fcf-form-group">
+        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Submit</button>
+    </div>
+    </form>
+
+    <br />
+    <script>
+      var nextStep = document.querySelector("#nextStep");
+
+      nextStep.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Hide first view
+        document.getElementById("my_form").style.display = "none";
+
+        // Show thank you message element
+        document.getElementById("thank_you").style.display = "block";
+      });
+    </script>
+  </body>
+</html>

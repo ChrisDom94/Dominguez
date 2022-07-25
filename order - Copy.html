@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+    </style>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+    <style>
+      ul {
+        text-align: left;
+      }
+    </style>
+    <style>
+      body {
+        background-color: #19f9fc;
+      }
+    </style>
+    <style>
+      body {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Order</h2>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="index.html" class="navbar__links">
+          Home >> <a href="order.html" class="navbar__links"> Order </a>
+        </a>
+      </li>
+    </ul>
+    <label for="package_1">Package #1 Options</label>
+    <select id="package_1" name="package_1">
+      <option value="select_blank">--Select--</option>
+      <option value="digital">Digital Only - $19.95</option>
+      <option value="digital&mail">Digital & Physical - $29.95</option>
+      <option value="digital&mail_express">
+        Digital & Physical Express Delivery - $39.95
+      </option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <label for="package_2">Package #2 Options</label>
+    <select id="package_2" name="package_2">
+      <option value="select_blank">--Select--</option>
+      <option value="digital">Digital Only - $29.95</option>
+      <option value="digital&mail">Digital & Physical - $39.95</option>
+      <option value="digital&mail_express">
+        Digital & Physical Express Delivery - $49.95
+      </option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <label for="package_3">Package #3 Options</label>
+    <select id="package_3" name="package_3">
+      <option value="select_blank">--Select--</option>
+      <option value="digital">Digital Only - $39.95</option>
+      <option value="digital&mail">Digital & Physical - $49.95</option>
+      <option value="digital&mail_express">
+        Digital & Physical Express Delivery - $59.95
+      </option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" />
+    <br />
+    <br />
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" />
+    <label for="pnumber">Phone Number:</label>
+    <input type="text" id="pnumber" name="pnumber" />
+    <br />
+    <br />
+    <label for="cnumber">CC Number:</label>
+    <input type="text" id="cnumber" name="cnumber" />
+    <label for="edata">Expiration Date:</label>
+    <input type="text" id="edate" name="edate" />
+    <br />
+    <br />
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" />
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" />
+    <br />
+    <br />
+
+    <form action="/action_page.php">
+      <input type="file" id="myFile" name="filename" />
+    </form>
+
+    <div id="my_form">
+      <p>Please Click Submit</p>
+      <button id="nextStep">Submit</button>
+    </div>
+
+    <div id="thank_you" style="display: none">
+      <p>Thank you for your Order</p>
+      <button type="submit">Close</button>
+    </div>
+
+    <script>
+      var nextStep = document.querySelector("#nextStep");
+
+      nextStep.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Hide first view
+        document.getElementById("my_form").style.display = "none";
+
+        // Show thank you message element
+        document.getElementById("thank_you").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
