@@ -1,0 +1,25 @@
+print("Hello Welcome to the game!")
+input("Press Enter to begin ")
+print('')
+input("In this game the goal is to survive 'Enter to continue'")
+print('')
+open_Door = input("You're in a dark room with a red door, the room is empty. Do you want to open the door? (Y/N)").upper()
+print('')
+if open_Door == 'Y':
+    input("The door opens and you walk out into a hallway 'Enter to continue'")
+else:
+    print("You Died!")
+    sys.exit()
+print('')
+input("The hallways leads you into an area with a table and two chairs. One chair is empty, but the other chair has a man sitting down. 'Enter to continue'")
+print('')
+sit_Down = input("The man has a black suite on and has red eyes. He tells you welcome to the mansion and tells you to sit down. Do you want to sit down? (Y/N)").upper()
+print('')
+if sit_Down == 'Y':
+    input("You pull out the chair and sit down, but as you sit down the man stands up from his chair across from you. 'Enter to continue'")
+else:
+    print("You Died!")
+    sys.exit()
+print('')
+print("He jumps from across the table with a knife in hand!")
+what_to_do = input("What are you going to do?  A:Run  B:Fight back  C:Do nothing")
